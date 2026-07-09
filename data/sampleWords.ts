@@ -1,0 +1,88 @@
+import { Word } from '../src/models/Word';
+
+/**
+ * @deprecated Verwende stattdessen `importedWords` aus `./importedWords.ts`.
+ * Kleine Beispielmenge für Tests – die App lädt standardmäßig die importierte Excel-Datenbank.
+ */
+export const sampleWords: Word[] = [
+  {
+    id: 'word-1',
+    mundart: 'Griene',
+    schriftdeutsch: 'Grün',
+    bedeutung: 'Die Farbe Grün, z. B. von Wiesen und Bäumen im Odenwald.',
+    audioDatei: 'griene.mp3',
+    sprecher: 'Maria Schmidt',
+    ort: 'Groß-Umstadt',
+    datum: '2023-05-12',
+  },
+  {
+    id: 'word-2',
+    mundart: 'Abbed',
+    schriftdeutsch: 'Abend',
+    bedeutung: 'Der spätere Tagesabschnitt, wenn die Sonne untergeht.',
+    audioDatei: 'abbed.mp3',
+    sprecher: 'Hans Müller',
+    ort: 'Groß-Umstadt',
+    datum: '2023-06-03',
+  },
+  {
+    id: 'word-3',
+    mundart: 'Kann',
+    schriftdeutsch: 'Kanne',
+    bedeutung: 'Gefäß zum Kaffee- oder Teekochen, oft aus Emaille.',
+    audioDatei: 'kann.mp3',
+    sprecher: 'Elisabeth Weber',
+    ort: 'Groß-Umstadt',
+    datum: '2023-07-18',
+  },
+  {
+    id: 'word-4',
+    mundart: 'Schdau',
+    schriftdeutsch: 'Stadt',
+    bedeutung: 'Die Stadt Groß-Umstadt oder allgemein eine Ortschaft.',
+    audioDatei: 'schdau.mp3',
+    sprecher: 'Peter Klein',
+    ort: 'Groß-Umstadt',
+    datum: '2023-08-22',
+  },
+  {
+    id: 'word-5',
+    mundart: 'Haaß',
+    schriftdeutsch: 'Hase',
+    bedeutung: 'Das Tier im Feld und Wald, besonders in Hasenjagd-Geschichten.',
+    audioDatei: 'haass.mp3',
+    sprecher: 'Maria Schmidt',
+    ort: 'Groß-Umstadt',
+    datum: '2023-09-10',
+  },
+  {
+    id: 'word-6',
+    mundart: 'Brod',
+    schriftdeutsch: 'Brot',
+    bedeutung: 'Grundnahrungsmittel aus Mehl, früher oft selbst gebacken.',
+    audioDatei: 'brod.mp3',
+    sprecher: 'Hans Müller',
+    ort: 'Groß-Umstadt',
+    datum: '2023-10-05',
+  },
+  {
+    id: 'word-7',
+    mundart: 'Wasser',
+    schriftdeutsch: 'Wasser',
+    bedeutung: 'Flüssigkeit zum Trinken; im Dialekt oft mit rollendem „r".',
+    audioDatei: 'wasser.mp3',
+    sprecher: 'Elisabeth Weber',
+    ort: 'Groß-Umstadt',
+    datum: '2023-11-14',
+  },
+  {
+    id: 'word-8',
+    mundart: 'Kinder',
+    schriftdeutsch: 'Kinder',
+    bedeutung: 'Junge Menschen; im Dialekt mit charakteristischer Aussprache.',
+    audioDatei: 'kinder.mp3',
+    sprecher: 'Peter Klein',
+    ort: 'Groß-Umstadt',
+    datum: '2024-01-08',
+  },
+];

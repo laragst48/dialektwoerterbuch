@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "DialektWörterbuch Groß-Umstadt",
+    "slug": "dialektwoerterbuch-gross-umstadt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1B4332"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "de.grossumstadt.dialektwoerterbuch",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Die App benötigt Spracherkennung, um gesprochene Dialektwörter zu erkennen.",
+        "NSMicrophoneUsageDescription": "Die App benötigt das Mikrofon für die Spracheingabe bei der Aussprache-Suche."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1B4332"
+      },
+      "package": "de.grossumstadt.dialektwoerterbuch",
+      "permissions": [
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Die App benötigt das Mikrofon für die Spracheingabe.",
+          "speechRecognitionPermission": "Die App benötigt Spracherkennung für die Aussprache-Suche."
+        }
+      ],
+      "expo-sqlite"
+    ]
+  }
+}

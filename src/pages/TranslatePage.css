@@ -1,0 +1,344 @@
+.translate-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.direction-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dir-btn {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--border);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.dir-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.dir-btn:hover:not(.active) {
+  border-color: var(--primary-light);
+}
+
+.dir-label {
+  font-weight: 600;
+}
+
+.dir-arrow {
+  opacity: 0.6;
+}
+
+.swap-btn {
+  background: var(--bg-card);
+  color: var(--primary);
+  border: 2px solid var(--border);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.swap-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.translate-results {
+  margin-top: 1rem;
+}
+
+.result-count {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.translate-result-item {
+  padding: 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.translate-result-item:hover,
+.translate-result-item.selected {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(193,39,45,0.12);
+  transform: translateY(-1px);
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.result-row .result-pair {
+  margin-bottom: 0.5rem;
+}
+
+.play-result-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+  padding: 0;
+}
+
+.play-result-btn:hover {
+  background: #219a52;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(45,125,70,0.35);
+}
+
+.play-result-btn.playing {
+  background: var(--accent);
+}
+
+.translate-result-item .result-meaning {
+  margin-top: 0.25rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-light);
+}
+
+.no-results strong {
+  color: var(--text);
+}
+
+.hint {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.translate-placeholder {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Voice input section */
+.voice-card {
+  margin-top: 1.5rem;
+}
+
+.voice-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.voice-card > p {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.voice-input-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.voice-btn {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 3px solid var(--border);
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.voice-btn:hover {
+  border-color: var(--primary-light);
+  background: white;
+  transform: scale(1.03);
+}
+
+.voice-btn.listening {
+  border-color: var(--primary);
+  background: #fff5f5;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(193,39,45,0.4); }
+  50% { box-shadow: 0 0 0 16px rgba(193,39,45,0); }
+  100% { box-shadow: 0 0 0 0 rgba(193,39,45,0); }
+}
+
+.mic-icon {
+  font-size: 1.8rem;
+}
+
+.voice-live-text {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  background: #fff5f5;
+  border: 2px solid var(--danger);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.05rem;
+  width: 100%;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.voice-live-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--danger);
+  animation: recPulse 1s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes recPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.voice-error-box {
+  color: var(--primary);
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  background: #fff5f5;
+  border-radius: var(--radius-sm);
+  width: 100%;
+}
+
+.voice-matches {
+  margin-top: 1rem;
+}
+
+.voice-matches-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.voice-match-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.voice-match-item .result-pair {
+  margin-bottom: 0;
+}
+
+.play-btn-small {
+  background: var(--success);
+  color: white;
+  border: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.play-btn-small:hover {
+  background: #219a52;
+}
+
+.voice-unavailable {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-light);
+}
+
+.voice-unavailable p {
+  margin-bottom: 0.5rem;
+}
+
+.voice-hint {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 767px) {
+  .direction-toggle {
+    gap: 0.35rem;
+  }
+
+  .dir-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .swap-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .voice-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
